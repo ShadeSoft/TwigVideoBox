@@ -1,0 +1,21 @@
+{
+    "name": "shadesoft/twig-video-box",
+    "description": "Twig extensions for making video embedding easy.",
+    "keywords": ["twig", "video", "embed"],
+    "type": "package",
+    "license": "MIT",
+    "homepage": "https://github.com/ShadeSoft/TwigVideoBox",
+    "authors": [
+        {
+            "name": "Szabolcs Sur?nyi",
+            "email": "szabolcs.suranyi@shadesoft.hu",
+            "homepage": "http://shadesoft.hu"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "ShadeSoft\\": "" }
+    },
+    "require": {
+        "twig/twig": "~1.0|~2.0"
+    }
+}
