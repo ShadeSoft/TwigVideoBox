@@ -17,9 +17,33 @@ This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
+### Including into Symfony container
+
+```yaml
+# app/config/services.yml for Symfony 2-3 and config/services.yaml for Symfony 4
+
+shadesoft.twig.video_box.youtube_extension:
+    class: ShadeSoft\Twig\YouTubeExtension
+    tags:
+        - { name: twig.extension }
+```
+
+### Including into Slim Framework's Twig view renderer
+
+```php
+// src/dependencies.php
+
+// ...
+$container['view'] = function($c) {
+    //...
+    $view->addExtension(new ShadeSoft\Twig\YouTubeExtension);
+    //...
+}
+```
+
 ## Usage
 
-Add \ShadeSoft\Twig\YouTubeExtension to your Twig environment's dependencies, then you can use the filters:
+Add \ShadeSoft\Twig\YouTubeExtension to your Twig environment's dependencies (or include into one of the frameworks above), then you can use the filters:
 
 ```twig
 {{ 'youtube_video_id'|youtube }} {# Renders YouTube with the default dimensions (560x315) #}
