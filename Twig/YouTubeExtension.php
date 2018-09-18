@@ -30,7 +30,7 @@ class YouTubeExtension extends \Twig_Extension {
      * @param int $height
      * @return string
      */
-    public function getBoxes($content, $with = 560, $height = 315) {
+    public function getBoxes($content, $width = 560, $height = 315) {
         return preg_replace(
             '#([^\"\'])http[s]?://([w]{3}\.)?youtu[\.]?be(\.com)?/(watch\?v=)?([_a-zA-Z0-9-]+)#',
             '${1}<iframe width="' . $width . '" height="' . $height . '" src="https://www.youtube.com/embed/${5}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
