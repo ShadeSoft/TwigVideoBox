@@ -51,7 +51,7 @@ Add \ShadeSoft\Twig\YouTubeExtension to your Twig environment's dependencies (or
 {{ 'youtube_video_id'|youtube(640, 480) }} {# Renders YouTube with both dimensions given (640x480) #}
 
 {% set content = '<div><p>Youtube video:</p>http://youtu.be/video_id</div>' %}
-{{ content|raw|youtubeBoxes }} {# Renders the div with the p and the embedded video inside content #}
+{{ content|youtubeBoxes|raw }} {# Renders the div with the p and the embedded video inside content #}
 {# With this you can render multiple video boxes in a html content, you can simply use any valid YouTube url to the video #}
 {# The width and height parameters can be used here, too #}
 ```
