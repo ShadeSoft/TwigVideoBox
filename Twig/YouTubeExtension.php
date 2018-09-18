@@ -16,8 +16,8 @@ class YouTubeExtension extends \Twig_Extension {
 
     /**
      * @param string $id
-     * @param int $width
-     * @param int $height
+     * @param int|string $width
+     * @param int|string $height
      * @return string
      */
     public function getBox($id, $width = 560, $height = 315) {
@@ -26,8 +26,8 @@ class YouTubeExtension extends \Twig_Extension {
 
     /**
      * @param string $content
-     * @param int $width
-     * @param int $height
+     * @param int|string $width
+     * @param int|string $height
      * @return string
      */
     public function getBoxes($content, $width = 560, $height = 315) {

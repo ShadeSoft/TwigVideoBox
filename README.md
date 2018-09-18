@@ -49,6 +49,7 @@ Add \ShadeSoft\Twig\YouTubeExtension to your Twig environment's dependencies (or
 {{ 'youtube_video_id'|youtube }} {# Renders YouTube with the default dimensions (560x315) #}
 {{ 'youtube_video_id'|youtube(640) }} {# Renders YouTube with the width given (640x315) #}
 {{ 'youtube_video_id'|youtube(640, 480) }} {# Renders YouTube with both dimensions given (640x480) #}
+{{ 'youtube_video_id'|youtube('100%') }} {# Renders YouTube with the width fluid (100% x 315px) #}
 
 {% set content = '<div><p>Youtube video:</p>http://youtu.be/video_id</div>' %}
 {{ content|youtubeBoxes|raw }} {# Renders the div with the p and the embedded video inside content #}
