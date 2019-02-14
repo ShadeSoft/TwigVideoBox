@@ -17,10 +17,18 @@ This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
-### Including into Symfony container
+### Including into Symfony 3-4 container (if autowire and autoconfigure is set to true)
 
 ```yaml
-# app/config/services.yml for Symfony 2-3 and config/services.yaml for Symfony 4
+# app/config/services.yml for Symfony 3 or config/services.yaml for Symfony 4
+
+ShadeSoft\Twig\YouTubeExtension: ~
+```
+
+### Including into Symfony 2 container
+
+```yaml
+# app/config/services.yml
 
 shadesoft.twig.video_box.youtube_extension:
     class: ShadeSoft\Twig\YouTubeExtension
