@@ -2,15 +2,17 @@
 
 namespace ShadeSoft\Twig;
 
-class YouTubeExtension extends \Twig_Extension {
+use Twig\TwigFilter;
+
+class YouTubeExtension extends \Twig\Extension\AbstractExtension {
 
     /**
      * @return array
      */
     public function getFilters() {
         return array(
-            new \Twig_SimpleFilter('youtube', array($this, 'getBox'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFilter('youtubeBoxes', array($this, 'getBoxes'))
+            new TwigFilter('youtube', array($this, 'getBox'), array('is_safe' => array('html'))),
+            new TwigFilter('youtubeBoxes', array($this, 'getBoxes'))
         );
     }
 
